@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaoyang Nick Hu</title>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #2a2a2a;
+        }
+
+        /* Header grid layout */
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                grid-template-columns: 1fr;
+            }
+            .profile-pic {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #2a2a2a;
+        }
+
+        a {
+            color: #2a6496;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        .publication {
+            margin-bottom: 25px;
+        }
+
+        .publication-title {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .publication-authors {
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .publication-venue {
+            color: #666;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .publication-links {
+            color: #666;
+        }
+
+        .publication-links a {
+            color: #666;
+        }
+
+        .profile-links {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="header-container">
+        <div class="header">
+            <h1>Xiaoyang Nick Hu</h1>
+            
+            <p>I am a research assistant at the <a href="https://ohbmil.github.io/">Oh Lab</a> at Brown University. I was once an undergrad at the University of Michigan. My B.S. is in math, computer science, and cognitive science. I am indebted to incredible mentors, both past and present: <a href="https://vivo.brown.edu/display/hoh">Hwamee Oh</a>, <a href="https://www.si.umich.edu/people/richard-lewis">Richard L. Lewis</a>, <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, and <a href="https://melanie-weber.github.io/">Melanie Weber</a>.</p>
+            
+            <div class="profile-links">
+                <a href="#">Email</a> / <a href="#">Google Scholar</a> / <a href="#">GitHub</a> / <a href="#">Twitter</a>
+            </div>
+        </div>
+        <img class="profile-pic" src="assets/images/profile.jpg" alt="Xiaoyang Nick Hu">
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Research</h2>
+        <p>I am fascinated by both natural and artificial intelligence—their shared principles and points of divergence. My research is driven by questions about 1) the representation of abstract concepts, 2) the mechanisms underlying controlled processing, and 3) their interplay.</p>
+    </div>
+
+    <div class="section">
+        <div class="publication">
+            <div class="publication-title">Do Language Models Understand the Cognitive Tasks Given to Them? Investigations with the N-Back Paradigm.</div>
+            <div class="publication-authors">Xiaoyang Hu, Richard L. Lewis</div>
+            <div class="publication-venue">Preprint, 2024</div>
+            <div class="publication-links">
+                <a href="#">paper</a> / <a href="#">code</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">In-Context Analogical Reasoning with Pre-Trained Language Models.</div>
+            <div class="publication-authors">Xiaoyang Hu, Shane Storks, Richard L. Lewis, Joyce Chai</div>
+            <div class="publication-venue">ACL, 2023</div>
+            <div class="publication-links">
+                <a href="#">paper</a> / <a href="#">code</a> / <a href="#">video</a> / <a href="#">coverage</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Misc.</h2>
+        <p>In my free time, I like watching ⚽️ and playing 🎾. I am a fan of <a href="#" onclick="showImage('assets/images/madrid.jpg')">Real Madrid</a> and <a href="#" onclick="showImage('assets/images/nadal.jpg')">Rafael Nadal</a>.</p>
+    </div>
+
+    <div class="credit">
+        Adapted from <a href="https://jonbarron.info">Jon Barron's website</a>
+    </div>
+
+    <!-- Modal for images -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+
+        function showImage(imageName) {
+            modal.style.display = "block";
+            modalImg.src = imageName;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
