@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaoyang Nick Hu</title>
+
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Xiaoyang Nick Hu">
+    <meta property="og:description" content="Research assistant at the Oh Lab at Brown University">
+    <meta property="og:image" content="assets/profile.jpg">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://your-domain.com">
+
+    <!-- Structured data for Google Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xiaoyang Nick Hu",
+      "image": "assets/profile.jpg",
+      "url": "https://your-domain.com",
+      "sameAs": [
+        "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Ro_FGsAAAAAJ",
+        "https://github.com/hxiaoyang",
+        "https://x.com/hu_xiaoyang"
+      ],
+      "jobTitle": "Research Assistant",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Brown University",
+        "url": "https://sites.brown.edu/oh-ctnlab/"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "University of Michigan"
+      },
+      "email": "xiaoyang_hu@brown.edu",
+      "description": "Research assistant at the Oh Lab at Brown University"
+    }
+    </script>
+
     <style>
-        /* Existing styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             font-size: 16px;
@@ -16,7 +51,6 @@
             color: #2a2a2a;
         }
 
-        /* Header grid layout */
         .header-container {
             display: grid;
             grid-template-columns: 1fr auto;
@@ -77,13 +111,13 @@
         .publication-title {
             font-weight: 500;
             margin-bottom: 0px;
-            ine-height: 1.2;
+            line-height: 1.2;
         }
 
         .publication-authors {
             color: #666;
             margin-bottom: 0px;
-            ine-height: 1.2;
+            line-height: 1.2;
         }
 
         .publication-venue {
@@ -104,7 +138,6 @@
             margin-bottom: 20px;
         }
 
-        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -139,50 +172,51 @@
 <body>
     <div class="content-wrapper">
         <div class="header-container">
-        <div class="header">
-            <h1>Xiaoyang Nick Hu</h1>
-            
-            <p>I am a research assistant at the <a href="https://sites.brown.edu/oh-ctnlab/">Oh Lab</a> at Brown University. I was once an undergrad at the University of Michigan. My B.S. is in math, computer science, and cognitive science. I am indebted to incredible mentors, both past and present: <a href="https://vivo.brown.edu/display/hoh23">Hwamee Oh</a>, <a href="https://lsa.umich.edu/psych/people/faculty/rickl.html">Richard L. Lewis</a>, <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, <a href="http://melanie-weber.com/">Melanie Weber</a>, <a href="https://www.shanestorks.com/">Shane Storks</a>, etc.</p>
-            
-            <div class="profile-links">
-                <a href="mailto:xiaoyang_hu@brown.edu">Email</a> / <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Ro_FGsAAAAAJ">Google Scholar</a> / <a href="https://github.com/hxiaoyang">GitHub</a> / <a href="https://x.com/hu_xiaoyang">Twitter</a>
+            <div class="header">
+                <h1>Xiaoyang Nick Hu</h1>
+                
+                <p>I am a research assistant at the <a href="https://sites.brown.edu/oh-ctnlab/">Oh Lab</a> at Brown University. I was once an undergrad at the University of Michigan. My B.S. is in math, computer science, and cognitive science. I am indebted to incredible mentors, both past and present: <a href="https://vivo.brown.edu/display/hoh23">Hwamee Oh</a>, <a href="https://lsa.umich.edu/psych/people/faculty/rickl.html">Richard L. Lewis</a>, <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, <a href="http://melanie-weber.com/">Melanie Weber</a>, <a href="https://www.shanestorks.com/">Shane Storks</a>, etc.</p>
+                
+                <div class="profile-links">
+                    <a href="mailto:xiaoyang_hu@brown.edu">Email</a> / <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Ro_FGsAAAAAJ">Google Scholar</a> / <a href="https://github.com/hxiaoyang">GitHub</a> / <a href="https://x.com/hu_xiaoyang">Twitter</a>
+                </div>
             </div>
-        </div>
-        <img class="profile-pic" src="assets/profile.jpg" alt="Xiaoyang Nick Hu">
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">Research</h2>
-        <p>I am fascinated by both natural and artificial intelligence—their shared principles and points of divergence. My research is driven by questions about 1) the representation of abstract concepts, 2) the mechanisms underlying controlled processing, and 3) their interplay.</p>
-    </div>
-
-    <div class="section">
-        <div class="publication">
-            <div class="publication-title">Do Language Models Understand the Cognitive Tasks Given to Them? Investigations with the <i>N</i>-Back Paradigm</div>
-            <div class="publication-authors">Xiaoyang Hu, Richard L. Lewis</div>
-            <div class="publication-venue"><i>Preprint</i>, 2024</div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2412.18120">paper</a> / <a href="https://github.com/hxiaoyang/lm-nback">code</a>
-            </div>
+            <img class="profile-pic" src="/api/placeholder/220/220" alt="Xiaoyang Nick Hu">
         </div>
 
-        <div class="publication">
-            <div class="publication-title">In-Context Analogical Reasoning with Pre-Trained Language Models</div>
-            <div class="publication-authors">Xiaoyang Hu, Shane Storks, Richard L. Lewis, Joyce Chai</div>
-            <div class="publication-venue"><i>ACL</i>, 2023</div>
-            <div class="publication-links">
-                <a href="https://aclanthology.org/2023.acl-long.109">paper</a> / <a href="https://github.com/hxiaoyang/lm-raven">code</a> / <a href="https://youtu.be/_5TUz5kC0Ok">video</a> / <a href="https://cse.engin.umich.edu/stories/researchers-investigate-language-models-capacity-for-analogical-reasoning-in-groundbreaking-study">coverage</a>
+        <div class="section">
+            <h2 class="section-title">Research</h2>
+            <p>I am fascinated by both natural and artificial intelligence—their shared principles and points of divergence. My research is driven by questions about 1) the representation of abstract concepts, 2) the mechanisms underlying controlled processing, and 3) their interplay.</p>
+        </div>
+
+        <div class="section">
+            <div class="publication">
+                <div class="publication-title">Do Language Models Understand the Cognitive Tasks Given to Them? Investigations with the <i>N</i>-Back Paradigm</div>
+                <div class="publication-authors">Xiaoyang Hu, Richard L. Lewis</div>
+                <div class="publication-venue"><i>Preprint</i>, 2024</div>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2412.18120">paper</a> / <a href="https://github.com/hxiaoyang/lm-nback">code</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">In-Context Analogical Reasoning with Pre-Trained Language Models</div>
+                <div class="publication-authors">Xiaoyang Hu, Shane Storks, Richard L. Lewis, Joyce Chai</div>
+                <div class="publication-venue"><i>ACL</i>, 2023</div>
+                <div class="publication-links">
+                    <a href="https://aclanthology.org/2023.acl-long.109">paper</a> / <a href="https://github.com/hxiaoyang/lm-raven">code</a> / <a href="https://youtu.be/_5TUz5kC0Ok">video</a> / <a href="https://cse.engin.umich.edu/stories/researchers-investigate-language-models-capacity-for-analogical-reasoning-in-groundbreaking-study">coverage</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h2 class="section-title">Misc.</h2>
-        <p>In my free time, I like watching ⚽️ and playing 🎾. I am a fan of <a href="#" onclick="showImage('assets/madrid.jpg')">Real Madrid</a> and <a href="#" onclick="showImage('assets/nadal.jpg')">Rafael Nadal</a>.</p>
-    </div>
+        <div class="section">
+            <h2 class="section-title">Misc.</h2>
+            <p>In my free time, I like watching ⚽️ and playing 🎾. I am a fan of <a href="#" onclick="showImage('/api/placeholder/400/300')">Real Madrid</a> and <a href="#" onclick="showImage('/api/placeholder/400/300')">Rafael Nadal</a>.</p>
+        </div>
 
-    <div class="credit">
-        Adapted from <a href="https://jonbarron.info">Jon Barron's website</a> with the help of Claude.
+        <div class="credit">
+            Adapted from <a href="https://jonbarron.info">Jon Barron's website</a> with the help of Claude.
+        </div>
     </div>
 
     <!-- Modal for images -->
