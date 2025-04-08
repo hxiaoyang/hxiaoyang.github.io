@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,6 +54,27 @@
     </script>
 
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2a2a2a;
+            --link-color: #1672D0;
+            --secondary-text: #666;
+            --toggle-text: #1672D0;
+            --modal-bg: rgba(0,0,0,0.9);
+            --modal-text: #f1f1f1;
+            --transition: 0.3s ease-in-out;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #222;
+            --text-color: #e0e0e0;
+            --link-color: #5a9de9;
+            --secondary-text: #aaa;
+            --toggle-text: #5a9de9;
+            --modal-bg: rgba(0,0,0,0.9);
+            --modal-text: #f1f1f1;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             font-size: 16px;
@@ -61,7 +82,9 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            color: #2a2a2a;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: var(--transition);
         }
 
         .header-container {
@@ -93,12 +116,20 @@
             font-size: 32px;
             font-weight: 500;
             margin-bottom: 10px;
-            color: #2a2a2a;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .name-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         a {
-            color: #1672D0;
+            color: var(--link-color);
             text-decoration: none;
+            transition: var(--transition);
         }
 
         a:hover {
@@ -114,7 +145,8 @@
             font-size: 24px;
             font-weight: 500;
             margin-bottom: 20px;
-            color: #2a2a2a;
+            color: var(--text-color);
+            transition: var(--transition);
         }
 
         .publication {
@@ -124,24 +156,29 @@
         .publication-title {
             font-weight: 500;
             margin-bottom: 0px;
+            transition: var(--transition);
         }
 
         .publication-authors {
-            color: #666;
+            color: var(--secondary-text);
             margin-bottom: 0px;
+            transition: var(--transition);
         }
 
         .publication-venue {
-            color: #666;
+            color: var(--secondary-text);
             margin-bottom: 0px;
+            transition: var(--transition);
         }
 
         .publication-links {
-            color: #666;
+            color: var(--secondary-text);
+            transition: var(--transition);
         }
 
         .publication-links a {
-            color: #666;
+            color: var(--secondary-text);
+            transition: var(--transition);
         }
 
         .profile-links {
@@ -158,7 +195,8 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.9);
+            background-color: var(--modal-bg);
+            transition: var(--transition);
         }
 
         .modal-content {
@@ -172,7 +210,7 @@
             position: absolute;
             right: 35px;
             top: 15px;
-            color: #f1f1f1;
+            color: var(--modal-text);
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
@@ -180,7 +218,17 @@
 
         .credit {
             font-size: 15px;
-            color: #666;
+            color: var(--secondary-text);
+            transition: var(--transition);
+        }
+        
+        /* Text-based theme toggle styles */
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--toggle-text);
+            user-select: none;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -188,7 +236,10 @@
     <div class="content-wrapper">
         <div class="header-container">
             <div class="header">
-                <h1>Xiaoyang Nick Hu</h1>
+                <div class="name-container">
+                    <h1>Xiaoyang Nick Hu</h1>
+                    <span class="theme-toggle" id="themeToggle">Light</span>
+                </div>
                 
                 <p>I am a research assistant at the <a href="https://sites.brown.edu/oh-ctnlab/">Oh Lab</a> at Brown University. I was once an undergrad at the University of Michigan. My B.S. is in math, computer science, and cognitive science. I am indebted to incredible mentors, both past and present: <a href="https://vivo.brown.edu/display/hoh23">Hwamee Oh</a>, <a href="https://lsa.umich.edu/psych/people/faculty/rickl.html">Richard L. Lewis</a>, <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, <a href="http://melanie-weber.com/">Melanie Weber</a>, <a href="https://www.shanestorks.com/">Shane Storks</a>, etc.</p>
                 
@@ -266,6 +317,21 @@
             if (event.key === "Escape") {
                 closeModal();
             }
+        });
+
+        // Simple text-based theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        
+        // Toggle theme when text is clicked
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            
+            // Update the toggle text
+            themeToggle.textContent = newTheme === 'light' ? 'Dark' : 'Light';
         });
     </script>
 </body>
