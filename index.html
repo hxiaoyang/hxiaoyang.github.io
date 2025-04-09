@@ -12,9 +12,6 @@
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://hxiaoyang.github.io">
 
-    <!-- Spectral Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;700&display=swap" rel="stylesheet">
-
     <!-- Structured data for Google Knowledge Graph -->
     <script type="application/ld+json">
     {
@@ -66,22 +63,20 @@
             --modal-bg: rgba(0,0,0,0.9);
             --modal-text: #f1f1f1;
             --transition: 0.3s ease-in-out;
-            --publication-link-color: #1672D0;
         }
 
         [data-theme="dark"] {
             --bg-color: #222;
             --text-color: #e0e0e0;
             --link-color: #5a9de9;
-            --secondary-text: #e0e0e0;
+            --secondary-text: #aaa;
             --toggle-text: #5a9de9;
             --modal-bg: rgba(0,0,0,0.9);
             --modal-text: #f1f1f1;
-            --publication-link-color: #5a9de9;
         }
 
         body {
-            font-family: 'Spectral', serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             font-size: 16px;
             line-height: 1.6;
             max-width: 800px;
@@ -177,11 +172,12 @@
         }
 
         .publication-links {
+            color: var(--secondary-text);
             transition: var(--transition);
         }
 
         .publication-links a {
-            color: var(--publication-link-color);
+            color: var(--secondary-text);
             transition: var(--transition);
         }
 
@@ -226,10 +222,10 @@
             transition: var(--transition);
         }
         
-        /* Theme toggle styles with moon/sun icons */
+        /* Text-based theme toggle styles */
         .theme-toggle {
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
             color: var(--toggle-text);
             user-select: none;
             margin-left: 10px;
@@ -242,7 +238,7 @@
             <div class="header">
                 <div class="name-container">
                     <h1>Xiaoyang Nick Hu</h1>
-                    <span class="theme-toggle" id="themeToggle">☀️</span>
+                    <span class="theme-toggle" id="themeToggle">Light</span>
                 </div>
                 
                 <p>I am a research assistant at the <a href="https://sites.brown.edu/oh-ctnlab/">Oh Lab</a> at Brown University. I was once an undergrad at the University of Michigan. My B.S. is in math, computer science, and cognitive science. I am indebted to incredible mentors, both past and present: <a href="https://vivo.brown.edu/display/hoh23">Hwamee Oh</a>, <a href="https://lsa.umich.edu/psych/people/faculty/rickl.html">Richard L. Lewis</a>, <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, <a href="http://melanie-weber.com/">Melanie Weber</a>, <a href="https://www.shanestorks.com/">Shane Storks</a>, etc.</p>
@@ -323,22 +319,19 @@
             }
         });
 
-        // Theme toggle functionality with sun/moon symbols
+        // Simple text-based theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         
-        // Set initial icon based on default theme
-        themeToggle.textContent = htmlElement.getAttribute('data-theme') === 'light' ? '🌙' : '☀️';
-        
-        // Toggle theme when icon is clicked
+        // Toggle theme when text is clicked
         themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             
             htmlElement.setAttribute('data-theme', newTheme);
             
-            // Update the toggle icon
-            themeToggle.textContent = newTheme === 'light' ? '🌙' : '☀️';
+            // Update the toggle text
+            themeToggle.textContent = newTheme === 'light' ? 'Dark' : 'Light';
         });
     </script>
 </body>
