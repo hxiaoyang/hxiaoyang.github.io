@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaoyang Nick Hu</title>
-    
-    <!-- Google Fonts - Inter -->
+
+    <!-- Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Open Graph tags for social media sharing -->
     <meta property="og:title" content="Xiaoyang Nick Hu">
@@ -81,10 +81,10 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            font-size: 20px;
-            line-height: 1.7;
-            max-width: 650px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             color: var(--text-color);
@@ -119,8 +119,8 @@
         }
 
         h1 {
-            font-size: 40px;
-            font-weight: 600;
+            font-size: 32px;
+            font-weight: 500;
             margin-bottom: 10px;
             color: var(--text-color);
             transition: var(--transition);
@@ -148,8 +148,8 @@
         }
 
         .section-title {
-            font-size: 28px;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 500;
             margin-bottom: 20px;
             color: var(--text-color);
             transition: var(--transition);
@@ -160,20 +160,27 @@
         }
 
         .publication-title {
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 0px;
             color: var(--text-color);
             transition: var(--transition);
-            font-size: 20px;
         }
 
-        .publication-authors,
-        .publication-venue,
+        .publication-authors {
+            color: var(--text-color);
+            margin-bottom: 0px;
+            transition: var(--transition);
+        }
+
+        .publication-venue {
+            color: var(--text-color);
+            margin-bottom: 0px;
+            transition: var(--transition);
+        }
+
         .publication-links {
             color: var(--text-color);
             transition: var(--transition);
-            font-size: 19px;
-            margin-bottom: 0px;
         }
 
         .publication-links a {
@@ -222,6 +229,7 @@
             transition: var(--transition);
         }
         
+        /* Theme toggle icon styles */
         .theme-toggle {
             cursor: pointer;
             font-size: 18px;
@@ -238,18 +246,18 @@
             height: 20px;
         }
 
+        /* Moon icon (for light theme) */
         .moon-icon {
             display: none;
         }
-
         [data-theme="light"] .moon-icon {
             display: inline-block;
         }
-
         [data-theme="light"] .sun-icon {
             display: none;
         }
 
+        /* SVG icons */
         .icon-svg {
             width: 20px;
             height: 20px;
@@ -260,7 +268,8 @@
             stroke-linejoin: round;
             transition: var(--transition);
         }
-
+        
+        /* Exception for moon icon which needs fill */
         .moon-icon .icon-svg {
             fill: var(--toggle-text);
             stroke: none;
@@ -274,6 +283,7 @@
                 <div class="name-container">
                     <h1>Xiaoyang Nick Hu</h1>
                     <div class="theme-toggle" id="themeToggle">
+                        <!-- Sun icon (for dark theme) -->
                         <div class="theme-icon sun-icon">
                             <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="5"></circle>
@@ -287,6 +297,7 @@
                                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                             </svg>
                         </div>
+                        <!-- Moon icon (for light theme) -->
                         <div class="theme-icon moon-icon">
                             <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
@@ -313,7 +324,7 @@
             <div class="publication">
                 <div class="publication-title">Sparse Feature Coactivation Reveals Composable Semantic Modules in Large Language Models</div>
                 <div class="publication-authors">Ruixuan Deng*, Xiaoyang Hu*, Miles Gilbert, Shane Storks, Aman Taxali, Mike Angstadt, Chandra Sripada, Joyce Chai</div>
-                <div class="publication-venue"><i>Preprint</i>, 2025</div>
+                <div class="publication-venue">Preprint, 2025</div>
                 <div class="publication-links">
                     <a href="https://arxiv.org/pdf/2506.18141">paper</a>
                 </div>
@@ -322,7 +333,7 @@
             <div class="publication">
                 <div class="publication-title">Do Language Models Understand the Cognitive Tasks Given to Them? Investigations with the <i>N</i>-Back Paradigm</div>
                 <div class="publication-authors">Xiaoyang Hu, Richard L. Lewis</div>
-                <div class="publication-venue"><i>ACL Findings</i>, 2025</div>
+                <div class="publication-venue">ACL Findings, 2025</div>
                 <div class="publication-links">
                     <a href="https://arxiv.org/abs/2412.18120">paper</a> / <a href="https://github.com/hxiaoyang/lm-nback">code</a>
                 </div>
@@ -331,7 +342,7 @@
             <div class="publication">
                 <div class="publication-title">In-Context Analogical Reasoning with Pre-Trained Language Models</div>
                 <div class="publication-authors">Xiaoyang Hu*, Shane Storks*, Richard L. Lewis, Joyce Chai</div>
-                <div class="publication-venue"><i>ACL</i>, 2023</div>
+                <div class="publication-venue">ACL, 2023</div>
                 <div class="publication-links">
                     <a href="https://aclanthology.org/2023.acl-long.109">paper</a> / <a href="https://github.com/hxiaoyang/lm-raven">code</a> / <a href="https://youtu.be/_5TUz5kC0Ok">video</a> / <a href="https://cse.engin.umich.edu/stories/researchers-investigate-language-models-capacity-for-analogical-reasoning-in-groundbreaking-study">coverage</a>
                 </div>
@@ -355,6 +366,7 @@
     </div>
 
     <script>
+        // Modal functionality
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
 
@@ -367,27 +379,36 @@
             modal.style.display = "none";
         }
 
+        // Close modal when clicking outside the image
         window.onclick = function(event) {
             if (event.target == modal) {
                 closeModal();
             }
         }
 
+        // Close modal with escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 closeModal();
             }
         });
 
+        // Theme toggle functionality with icons
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
+        
+        // Set initial theme to light by default
         const savedTheme = localStorage.getItem('theme') || 'light';
         htmlElement.setAttribute('data-theme', savedTheme);
-
+        
+        // Toggle theme when icon is clicked
         themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
             htmlElement.setAttribute('data-theme', newTheme);
+            
+            // Save theme preference
             localStorage.setItem('theme', newTheme);
         });
     </script>
