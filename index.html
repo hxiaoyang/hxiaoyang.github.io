@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Open Graph tags for social media sharing -->
     <meta property="og:title" content="Xiaoyang Nick Hu">
@@ -67,7 +67,7 @@
             --toggle-text: #1672D0;
             --modal-bg: rgba(0,0,0,0.9);
             --modal-text: #f1f1f1;
-            --bibtex-bg: #f5f5f5;
+            --bibtex-bg: #f0f0f0;
             --transition: 0.3s ease-in-out;
         }
 
@@ -80,6 +80,16 @@
             --modal-bg: rgba(0,0,0,0.9);
             --modal-text: #f1f1f1;
             --bibtex-bg: #333;
+        }
+
+        [data-theme="dark"] .publication-links a,
+        [data-theme="dark"] .publication-links .bibtex-toggle {
+            background-color: #3a3a3a;
+        }
+
+        [data-theme="dark"] .publication-links a:hover,
+        [data-theme="dark"] .publication-links .bibtex-toggle:hover {
+            background-color: rgba(90, 157, 233, 0.2);
         }
 
         body {
@@ -184,7 +194,31 @@
 
         .publication-links {
             color: var(--text-color);
+            margin-top: 4px;
             transition: var(--transition);
+        }
+
+        .publication-links a,
+        .publication-links .bibtex-toggle {
+            display: inline-block;
+            padding: 1px 4px;
+            margin-right: 6px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .publication-links a:last-child,
+        .publication-links .bibtex-toggle:last-child {
+            margin-right: 0;
+        }
+
+        .publication-links a:hover,
+        .publication-links .bibtex-toggle:hover {
+            background-color: rgba(22, 114, 208, 0.1);
+            text-decoration: none;
         }
 
         .publication-links a {
@@ -364,7 +398,7 @@
                 <div class="publication-authors">X. Hu</div>
                 <div class="publication-venue"><i>Workshop on Interpreting Cognition in Deep Learning Models at NeurIPS</i>, 2025 (in preparation)</div>
                 <div class="publication-links">
-                    [<span class="bibtex-toggle" onclick="toggleBibtex('bibtex1')">bibtex</span>]
+                    <span class="bibtex-toggle" onclick="toggleBibtex('bibtex1')">bibtex</span>
                 </div>
                 <div id="bibtex1" class="bibtex-content">@inproceedings{hu-2025-conflict,
     title={Conflict Adaptation in Vision-Language Models},
@@ -383,7 +417,7 @@
                 <div class="publication-authors">R. Deng*, X. Hu*, M. Gilbert, S. Storks, A. Taxali, M. Angstadt, C. Sripada, J. Chai</div>
                 <div class="publication-venue"><i>Workshop on Interpreting Cognition in Deep Learning Models at NeurIPS</i>, 2025 (in submission)</div>
                 <div class="publication-links">
-                    [<span class="bibtex-toggle" onclick="toggleBibtex('bibtex2')">bibtex</span>]
+                    <span class="bibtex-toggle" onclick="toggleBibtex('bibtex2')">bibtex</span>
                 </div>
                 <div id="bibtex2" class="bibtex-content">@inproceedings{deng-2025-sparse,
     title={Sparse Feature Coactivation Reveals Composable Semantic Modules in Large Language Models}, 
@@ -402,9 +436,9 @@
                 <div class="publication-authors">X. Hu, R. L. Lewis</div>
                 <div class="publication-venue"><i>Findings of the Association for Computational Linguistics</i>, 2025</div>
                 <div class="publication-links">
-                    [<a href="https://github.com/hxiaoyang/lm-nback">code</a>] 
-                    [<a href="https://youtu.be/mGFEgpHFdlc">video</a>] 
-                    [<span class="bibtex-toggle" onclick="toggleBibtex('bibtex3')">bibtex</span>]
+                    <a href="https://github.com/hxiaoyang/lm-nback">code</a>
+                    <a href="https://youtu.be/mGFEgpHFdlc">video</a>
+                    <span class="bibtex-toggle" onclick="toggleBibtex('bibtex3')">bibtex</span>
                 </div>
                 <div id="bibtex3" class="bibtex-content">@inproceedings{hu-lewis-2025-language,
     title = "Do Language Models Understand the Cognitive Tasks Given to Them? Investigations with the N-Back Paradigm",
@@ -431,8 +465,8 @@
                 <div class="publication-authors">X. Hu*, S. Storks*, R. L. Lewis, J. Chai</div>
                 <div class="publication-venue"><i>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics</i>, 2023</div>
                 <div class="publication-links">
-                    [<a href="https://github.com/hxiaoyang/lm-raven">code</a>] 
-                    [<span class="bibtex-toggle" onclick="toggleBibtex('bibtex4')">bibtex</span>]
+                    <a href="https://github.com/hxiaoyang/lm-raven">code</a>
+                    <span class="bibtex-toggle" onclick="toggleBibtex('bibtex4')">bibtex</span>
                 </div>
                 <div id="bibtex4" class="bibtex-content">@inproceedings{hu-etal-2023-context,
     title = "In-Context Analogical Reasoning with Pre-Trained Language Models",
